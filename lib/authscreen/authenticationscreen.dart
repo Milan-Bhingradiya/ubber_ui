@@ -3,7 +3,8 @@ import 'dart:ui';
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:uber_ui/common/button.dart';
+import 'package:uber_ui/afterlogin_default_screen.dart/afterlogin_default_screen.dart';
+import 'package:uber_ui/widgets/button.dart';
 import 'package:uber_ui/homescreeen/homescreen.dart';
 
 class authenticationscreen extends StatefulWidget {
@@ -130,7 +131,7 @@ class _authenticationscreenState extends State<authenticationscreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => homescreen(),
+                          builder: (context) => afterlogin_default_screen(),
                         ));
                   }),
 
