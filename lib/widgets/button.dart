@@ -7,14 +7,12 @@ class button extends StatelessWidget {
   final Color color;
   final VoidCallback func;
 
-
   const button({
     super.key,
     required this.text,
     required this.text_color,
     required this.color,
     required this.func,
-   
   });
 
   @override
@@ -31,7 +29,7 @@ class button extends StatelessWidget {
             child: Text(
               "$text",
               style: TextStyle(
-                  color: text_color, fontWeight: FontWeight.w700, fontSize: 18),
+                  color: text_color, fontWeight: FontWeight.w700, fontSize: 15),
             ),
           ),
         ),

@@ -35,7 +35,7 @@ class _authenticationscreenState extends State<authenticationscreen> {
               ),
               Text(
                 "Enter your mobile number",
-                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 24),
+                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
               ),
               SizedBox(
                 height: 15,
@@ -88,14 +88,14 @@ class _authenticationscreenState extends State<authenticationscreen> {
                     child: Center(
                         child: Text(
                       countrycode,
-                      style: TextStyle(fontSize: 25),
+                      style: TextStyle(fontSize: 22),
                     )),
                   ),
 
                   // this part show mobie number textfield.....
                   Flexible(
                     child: Container(
-                        padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                        padding: EdgeInsets.fromLTRB(0, 22, 0, 0),
                         decoration: BoxDecoration(
                             color: Color.fromARGB(255, 223, 222, 222),
                             borderRadius: BorderRadius.only(
@@ -112,7 +112,7 @@ class _authenticationscreenState extends State<authenticationscreen> {
                                 hintText: "Mobile Number",
                                 border: InputBorder.none),
                             keyboardType: TextInputType.number,
-                            style: TextStyle(fontSize: 25),
+                            style: TextStyle(fontSize: 22),
                           ),
                         )),
                   ),

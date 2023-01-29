@@ -18,16 +18,16 @@ class _walletscreenState extends State<walletscreen> {
             return [
               SliverAppBar(
                   leading: const BackButton(
-                    color: Colors.black, // <-- SEE HERE
+                    color: Colors.white, // <-- SEE HERE
                   ),
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.black,
                   expandedHeight: 80,
                   pinned: true,
                   flexibleSpace: FlexibleSpaceBar(
                     expandedTitleScale: 1.5,
                     title: Text(
                       "Wallet",
-                      style: TextStyle(color: Colors.black, fontSize: 20),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                       textAlign: TextAlign.start,
                     ),
                   )),
@@ -189,7 +189,7 @@ class _walletscreenState extends State<walletscreen> {
                   ),
                   Text("Payment methods",
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.w500)),
 
                   SizedBox(
                     height: 15,
@@ -206,7 +206,7 @@ class _walletscreenState extends State<walletscreen> {
                       ),
                       Text(
                         "Cash",
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 17),
                       )
                     ],
                   ),
@@ -223,7 +223,7 @@ class _walletscreenState extends State<walletscreen> {
                       ),
                     ),
                     height: 40,
-                    width: 200,
+                    width: 180,
                     decoration: BoxDecoration(
                         color: Colors.grey,
                         borderRadius: BorderRadius.all(Radius.circular(18))),
@@ -234,7 +234,7 @@ class _walletscreenState extends State<walletscreen> {
                   ),
                   Text("Ride Profile",
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.w500)),
 
                   SizedBox(
                     height: 15,
@@ -251,7 +251,7 @@ class _walletscreenState extends State<walletscreen> {
                       ),
                       Text(
                         "Persnol",
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 16),
                       )
                     ],
                   ),
@@ -262,7 +262,7 @@ class _walletscreenState extends State<walletscreen> {
                   ),
                   Text("Vouchers",
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.w500)),
 
                   SizedBox(
                     height: 15,
@@ -279,7 +279,7 @@ class _walletscreenState extends State<walletscreen> {
                       ),
                       Text(
                         "Vouchers",
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 16),
                       )
                     ],
                   ),
@@ -296,7 +296,7 @@ class _walletscreenState extends State<walletscreen> {
                       ),
                       Text(
                         "Add voucher code",
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 16),
                       )
                     ],
                   ),
@@ -308,7 +308,7 @@ class _walletscreenState extends State<walletscreen> {
                   ),
                   Text("Promotions",
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.w500)),
 
                   SizedBox(
                     height: 15,
@@ -325,7 +325,7 @@ class _walletscreenState extends State<walletscreen> {
                       ),
                       Text(
                         "promotions",
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 16),
                       )
                     ],
                   ),
@@ -342,7 +342,7 @@ class _walletscreenState extends State<walletscreen> {
                       ),
                       Text(
                         "Add promo code",
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 16),
                       )
                     ],
                   ),

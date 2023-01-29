@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:io' as io;
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:uber_ui/accountscreen/help_screen/help_screen.dart';
+import 'package:uber_ui/accountscreen/trips_screen/trips_screen.dart';
 import 'package:uber_ui/accountscreen/walletscreen/walletscreen.dart';
 import 'package:uber_ui/activityscreen/widgets/accountscreen_longsquare_container.dart';
 import 'package:uber_ui/activityscreen/widgets/accountscreen_square_container.dart';
@@ -15,6 +18,18 @@ class accountscreen extends StatefulWidget {
 }
 
 class _accountscreenState extends State<accountscreen> {
+  io.File? final_img;
+
+  Future<void> select_img() async {
+    final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      if (image != null) {
+        final_img = io.File(image.path);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -42,10 +57,26 @@ class _accountscreenState extends State<accountscreen> {
                         flex: 1,
                         child: Container(
                           child: Center(
-                            child: CircleAvatar(
-                              radius: 70,
-                              child: Image.asset("assets/ubber_banner1.png"),
-                            ),
+                            child: GestureDetector(
+                                onTap: select_img,
+                                child: CircleAvatar(
+                                    backgroundColor: Colors.black,
+                                    radius: 50,
+                                    backgroundImage: final_img == null
+                                        ? null
+                                        : FileImage(final_img!),
+                                    child: final_img == null
+                                        ? Container(
+                                            child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                  color: Colors.white,
+                                                  Icons.person),
+                                            ],
+                                          ))
+                                        : null)),
                           ),
                         ),
                       )
@@ -105,7 +136,7 @@ class _accountscreenState extends State<accountscreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => homescreen(),
+                                builder: (context) => tripsscreen(),
                               ));
                         },
                       ),
